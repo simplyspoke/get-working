@@ -19,3 +19,9 @@ apt-get upgrade -y
 apt-get remove -y $(cat $REMOVE)
 apt-get install -y $(cat $INSTALL)
 apt-get -y autoclean && sudo apt-get -y autoremove
+
+
+while IFS= read line
+do
+    eval git config --global $line
+done < "$GIT"
