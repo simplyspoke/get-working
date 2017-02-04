@@ -5,6 +5,34 @@
 # Run this script using sudo get-working.sh
 ########
 
+#!/bin/bash
+echo "Please enter the domain name for the site: "
+read domain_name
+echo "Please enter the development subdomain for the site: "
+read development_name
+echo "Please enter the database name for the site: "
+read database_name
+echo "Please enter the root MYSQL password: "
+read root_mysql
+echo "Please enter the site_access MYSQL password: "
+read access_mysql
+echo "Please enter admin name for the site: "
+read admin_name
+echo "Please enter admin password for the site: "
+read admin_password
+echo "You entered the following information.
+
+  Domain name: $domain_name
+  Development subdomain: $development_name
+  Database name: $database_name
+  Admin name: $admin_name
+  Admin password: $admin_password
+
+"
+read -p "Are these correct? (y/n) " confirm_names
+
+
+
 # Create a diretory variable
 dir="$(dirname "$0")"
 
@@ -52,7 +80,7 @@ service ssh restart
 
 ## UNRESOLVED
 ## These commands have not been intergrated into the script yet.
-# 
+#
 # echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
 #
 # sudo add-apt-repository multiverse
