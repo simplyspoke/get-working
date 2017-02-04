@@ -3,5 +3,6 @@ grunt
 grunt-cli
 gulp
 gulp-cli
+node-gyp
 npm-check-updates
 yo

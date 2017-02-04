@@ -23,6 +23,7 @@ openjdk-8-jdk
 openssh-server
 python
 python-gpgme
+python-pip
 redshift
 redshift-gtk
 synaptic
