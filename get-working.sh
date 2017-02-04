@@ -25,3 +25,9 @@ while IFS= read line
 do
     eval git config --global $line
 done < "$GIT"
+
+
+while IFS= read line
+do
+    eval gsettings set $line
+done < "$GSETTINGS"

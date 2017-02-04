@@ -1,0 +1,10 @@
+com.canonical.indicator.keyboard visible false
+com.canonical.Unity.ApplicationsLens display-available-apps false
+com.canonical.Unity.Lenses remote-content-search 'none'
+org.gnome.desktop.default-applications.terminal exec /usr/bin/terminator
+org.gnome.desktop.default-applications.terminal exec-arg "-x"
+org.gnome.desktop.interface clock-format 12h
+org.gnome.gedit.preferences.editor create-backup-copy false
+org.gnome.gedit.preferences.editor display-line-numbers true
+org.gnome.gedit.preferences.editor tab-size 2
+org.gnome.nautilus.preferences sort-directories-first true
