@@ -11,6 +11,7 @@ dir="$(dirname "$0")"
 GIT="$dir/lists/git.list"
 GSETTINGS="$dir/lists/gsettings.list"
 INSTALL="$dir/lists/install.list"
+NPM="$dir/lists/npm-globals.list"
 REMOVE="$dir/lists/remove.list"
 
 echo $dir
@@ -24,6 +25,7 @@ apt-get -y autoclean && sudo apt-get -y autoremove
 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 
+npm install -g $(cat $NPM)
 
 echo vm.swappiness=10 | tee -a /etc/sysctl.conf
 echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf
